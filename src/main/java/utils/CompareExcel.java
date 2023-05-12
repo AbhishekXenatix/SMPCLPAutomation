@@ -78,7 +78,8 @@ public class CompareExcel{
                 {
                    // System.out.println("[ERROR] :"+"Diference found for id (Sheet1) " + idstr1 + "| Sheet 1 id = " + idstr1+ " | Sheet 2 id = " + idstr2);
 
-                   log.info("Diference for ExpWh (Sheet1) " + ExPWhTotal + "  Sheet 1 ExpWh = " + ExPWhTotal+ "| Sheet 2 +kWh = " + kWhTotal);
+                    log.info("Diference for ExpWh (Sheet1) " + ExPWhTotal + "  Sheet 1 ExpWh = " + ExPWhTotal+ "| Sheet 2 +kWh = " + kWhTotal);
+                    System.out.println("Diference for ExpWh (Sheet1) " + ExPWhTotal + "  Sheet 1 ExpWh = " + ExPWhTotal+ "| Sheet 2 +kWh = " + kWhTotal);
                     extentReports.createTest("Check the Result").
                             log(Status.INFO,"[Processing] :"+"ExPWhTotal " + ExPWhTotal + "=> Sheet1 ExPWhTotal  = " + ExPWhTotal+ " Sheet 2 kWh = " + kWhTotal);
                    extentReports.flush();
