@@ -24,7 +24,7 @@ public class BrowserFactory {
                 WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver();
                 driver.manage().window().maximize();
-                driver.manage().deleteAllCookies();
+               // driver.manage().deleteAllCookies();
                // driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(PAGE_LOAD_TIMEOUT));
                // driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(IMPLICIT_WAIT));
                 break;
@@ -42,7 +42,7 @@ public class BrowserFactory {
                 WebDriverManager.edgedriver().setup();
                 driver = new EdgeDriver();
                 driver.manage().window().maximize();
-                driver.manage().deleteAllCookies();
+                //driver.manage().deleteAllCookies();
               //  driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(PAGE_LOAD_TIMEOUT));
               //  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(IMPLICIT_WAIT));
                 break;
