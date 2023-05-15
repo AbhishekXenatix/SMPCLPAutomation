@@ -2,7 +2,7 @@ package driver;
 
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.RemoteWebDriver;
+
 
 public class DriverManager {
 
