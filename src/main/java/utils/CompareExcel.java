@@ -31,12 +31,12 @@ public class CompareExcel{
         ExtentSparkReporter sparkReporter = new ExtentSparkReporter(file);
         extentReports.attachReporter(sparkReporter);
 
-        FileInputStream fileInputStream1 = new FileInputStream("C:\\Users\\Abhishek_Gupta3\\IdeaProjects\\SMPCLPAutomation\\src\\test\\resources\\LP114004656.xlsx");
+        FileInputStream fileInputStream1 = new FileInputStream("FilesExcel\\LP114004656.xlsx");
         XSSFWorkbook workbook1 = new XSSFWorkbook(fileInputStream1);
         XSSFSheet worksheet1 = workbook1.getSheet("LP 14004656");
         int rowCount1= worksheet1.getPhysicalNumberOfRows();
 
-        FileInputStream fileInputStream2 = new FileInputStream("C:\\Users\\Abhishek_Gupta3\\IdeaProjects\\SMPCLPAutomation\\src\\test\\resources\\Interval Data Export-14004656.xlsx");
+        FileInputStream fileInputStream2 = new FileInputStream("FilesExcel\\Interval Data Export-14004656.xlsx");
         XSSFWorkbook workbook2 = new XSSFWorkbook(fileInputStream2);
         XSSFSheet worksheet2 = workbook2.getSheet("Intervals-14004656");
         int rowCount2= worksheet2.getPhysicalNumberOfRows();
