@@ -5,18 +5,18 @@ package stepdefinitions;
 
 import common.TestContext;
 import io.cucumber.java.*;
-import org.apache.commons.io.FileUtils;
+
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
 import java.io.File;
 
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
+
+
+
+
+
 
 
 public class Hooks extends BaseSteps{
@@ -29,7 +29,7 @@ public class Hooks extends BaseSteps{
    // public static String  to="C:\\Users\\Abhishek_Gupta3\\IdeaProjects\\SMPCLPAutomation\\src\\test\\resources\\AllFiles";
 
     @Before
-    public void beforeScenario(Scenario scenario) throws IOException {
+    public void beforeScenario(Scenario scenario) {
         System.out.println("================ BEFORE ALL ================");
         System.out.println("Starting Driver: " + driver);
 
