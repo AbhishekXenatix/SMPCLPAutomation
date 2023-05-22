@@ -8,15 +8,11 @@ import io.cucumber.java.*;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import utils.WebUI;
 
 import java.io.File;
 
-
-
-
-
-
-
+import static stepdefinitions.AT.*;
 
 
 public class Hooks extends BaseSteps{
@@ -25,15 +21,12 @@ public class Hooks extends BaseSteps{
         super(context);
     }
 
-   //public static String from= "C:\\Users\\Abhishek_Gupta3\\Downloads\\UAT Test Master for SMP_20230512.xlsx";
-   // public static String  to="C:\\Users\\Abhishek_Gupta3\\IdeaProjects\\SMPCLPAutomation\\src\\test\\resources\\AllFiles";
-
     @Before
     public void beforeScenario(Scenario scenario) {
         System.out.println("================ BEFORE ALL ================");
         System.out.println("Starting Driver: " + driver);
 
-        File file = new File("C:\\Users\\Abhishek_Gupta3\\Downloads\\UAT Test Master for SMP_20230512.xlsx");
+        File file = new File("C:\\Users\\Abhishek_Gupta3\\Downloads\\TestDataDemo\\Mtr_10001528_Hist.xlsx");
         if (file.exists())
             // Show if the file exists
             System.out.println("Exists");
@@ -41,17 +34,9 @@ public class Hooks extends BaseSteps{
             // Show if the file does not exists
             System.out.println("Does not Exists");
 
-
-
-
-
-
-
-
-
-
-
-
+        AT.copy(fromCC, to);
+        AT.copy(fromLC, to);
+        WebUI.sleep(1);
 
 
     }

@@ -12,6 +12,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import org.apache.poi.ss.usermodel.CellType;
+import org.apache.poi.ss.usermodel.DataFormat;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -22,8 +23,7 @@ public class CompareExcel{
     //static Logger log = Logger.getLogger(String.valueOf(CompareExcel.class));
    static Log log= new Log();
 
-
-    public static void VerifyExcel() throws IOException {
+   public static void VerifyExcel() throws IOException {
 
 
         ExtentReports extentReports = new ExtentReports();
@@ -31,55 +31,62 @@ public class CompareExcel{
         ExtentSparkReporter sparkReporter = new ExtentSparkReporter(file);
         extentReports.attachReporter(sparkReporter);
 
-        FileInputStream fileInputStream1 = new FileInputStream("FilesExcel\\LP114004656.xlsx");
+       // FileInputStream fileInputStream1 = new FileInputStream("FilesExcel\\LP114004656.xlsx");
+        FileInputStream fileInputStream1 = new FileInputStream("AllFiles\\LP2-10001528.xlsx");
         XSSFWorkbook workbook1 = new XSSFWorkbook(fileInputStream1);
-        XSSFSheet worksheet1 = workbook1.getSheet("LP 14004656");
+        //XSSFSheet worksheet1 = workbook1.getSheet("LP 14004656");
+        XSSFSheet worksheet1 = workbook1.getSheet("001");
         int rowCount1= worksheet1.getPhysicalNumberOfRows();
+        WebUI.sleep(1);
 
-        FileInputStream fileInputStream2 = new FileInputStream("FilesExcel\\Interval Data Export-14004656.xlsx");
+        //FileInputStream fileInputStream2 = new FileInputStream("FilesExcel\\Interval Data Export-14004656.xlsx");
+        FileInputStream fileInputStream2 = new FileInputStream("AllFiles\\Mtr_10001528_Hist.xlsx");
         XSSFWorkbook workbook2 = new XSSFWorkbook(fileInputStream2);
-        XSSFSheet worksheet2 = workbook2.getSheet("Intervals-14004656");
+        //XSSFSheet worksheet2 = workbook2.getSheet("Intervals-14004656");
+        XSSFSheet worksheet2 = workbook2.getSheet("Mtr_10001528_Hist");
         int rowCount2= worksheet2.getPhysicalNumberOfRows();
+        WebUI.sleep(1);
 
 
 
-        if(rowCount1==rowCount2) {
+        if(rowCount1 == rowCount2) {
             for (int i = 1; i < rowCount1; i++) {
                 XSSFRow row1 = worksheet1.getRow(i);
                 XSSFRow row2 = worksheet2.getRow(i);
                 //------------------------------ Exp Wh Total and +kWh --------------------------
                 String ExPWhTotal = "";
                 XSSFCell ExpWh = row1.getCell(2);
+
                 if (ExpWh != null) {
                     ExpWh.setCellType(CellType.STRING);
                     ExPWhTotal = ExpWh.getStringCellValue();
                 }
                 String kWhTotal = "";
                 XSSFCell kWh = row2.getCell(3);
+
                 if (kWh != null) {
                     kWh.setCellType(CellType.STRING);
-                    String formula = kWh.getStringCellValue();
+                    kWhTotal = kWh.getStringCellValue();
+
+                   // String formula = kWh.getStringCellValue();
                    // System.out.println(formula);
 
                     try {
-                        Double num = Double.valueOf(formula);
-                        //System.out.println(num);
-                        Long j = Math.round(num*1000);
-                       // System.out.println(j);
-                        kWhTotal = Long.toString(j);
-                       // System.out.println(kWhTotal);
+                        //Double num = Double.valueOf(formula);
+                        //Long j = Math.round(num*1);
+                        //kWhTotal = Long.toString(j);
                     }catch (NumberFormatException exception){
                         exception.printStackTrace();
                     }
-                   // kWhTotal = kWh.getStringCellValue();
+
                 }
 
                 if(!ExPWhTotal.equals(kWhTotal))
                 {
                    // System.out.println("[ERROR] :"+"Diference found for id (Sheet1) " + idstr1 + "| Sheet 1 id = " + idstr1+ " | Sheet 2 id = " + idstr2);
 
-                    log.info("Diference for ExpWh (Sheet1) " + ExPWhTotal + "  Sheet 1 ExpWh = " + ExPWhTotal+ "| Sheet 2 +kWh = " + kWhTotal);
-                    System.out.println("Diference for ExpWh (Sheet1) " + ExPWhTotal + "  Sheet 1 ExpWh = " + ExPWhTotal+ "| Sheet 2 +kWh = " + kWhTotal);
+                    log.info("Diference for ExpWh (Sheet1) " + ExPWhTotal +  "| Sheet 2 +kWh = " + kWhTotal);
+                   // System.out.println("Diference for ExpWh (Sheet1) " + ExPWhTotal + "  Sheet 1 ExpWh = " + ExPWhTotal+ "| Sheet 2 +kWh = " + kWhTotal);
                     extentReports.createTest("Check the Result").
                             log(Status.INFO,"[Processing] :"+"ExPWhTotal " + ExPWhTotal + "=> Sheet1 ExPWhTotal  = " + ExPWhTotal+ " Sheet 2 kWh = " + kWhTotal);
                    extentReports.flush();
@@ -89,11 +96,12 @@ public class CompareExcel{
                 {
 
                     //extentReports.createTest("Check the Result").
-                     //       log(Status.INFO,"[Processing] :"+"ExPWhTotal " + ExPWhTotal + "=> Sheet1 ExPWhTotal  = " + ExPWhTotal+ " Sheet 2 kWh = " + kWhTotal);
+                    //log(Status.INFO,"[Processing] :"+"ExPWhTotal " + ExPWhTotal + "=> Sheet1 ExPWhTotal  = " + ExPWhTotal+ " Sheet 2 kWh = " + kWhTotal);
                     //extentReports.flush();
                     //Desktop.getDesktop().browse(new File("Reports/CucumberReports/ExtentReport.html").toURI());
                     // System.out.println("[Processing] :"+"ID " + idstr1 + "=> Sheet 1 id = " + idstr1+ " Sheet 2 id = " + idstr2);
                     log.info("[Processing] :"+"ExPWhTotal " + ExPWhTotal + "=> Sheet1 ExPWhTotal  = " + ExPWhTotal+ " Sheet 2 kWh = " + kWhTotal);
+                   // System.out.println("\"[Processing] :\"+\"ExPWhTotal \" + ExPWhTotal + \"=> Sheet1 ExPWhTotal  = \" + ExPWhTotal+ \" Sheet 2 kWh = \" + kWhTotal");
 
                 }
 

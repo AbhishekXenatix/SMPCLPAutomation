@@ -4,14 +4,13 @@ import common.TestContext;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import utils.WebUI;
 
 
 import java.io.IOException;
 
 public class PingStepdefs extends BaseSteps{
       TestContext testContext;
-
-
     public PingStepdefs(TestContext context){
         super(context);
         testContext=context;
@@ -22,6 +21,7 @@ public class PingStepdefs extends BaseSteps{
 
         System.out.println("Driver on Steps class: " + driver);
         driver.get("https://google.com");
+        WebUI.sleep(2);
     }
 
     @When("send issue command")

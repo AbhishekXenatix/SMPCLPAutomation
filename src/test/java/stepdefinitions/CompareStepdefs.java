@@ -6,6 +6,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import utils.CompareExcel;
+import utils.WebUI;
 
 import java.io.IOException;
 
@@ -27,6 +28,7 @@ public class CompareStepdefs extends BaseSteps{
 
     @Then("The report generated")
     public void theReportGenerated()  {
+
         System.out.println("The report window appeared with expected result");
     }
 }
