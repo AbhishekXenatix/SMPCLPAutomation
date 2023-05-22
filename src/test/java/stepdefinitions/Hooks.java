@@ -1,15 +1,22 @@
 package stepdefinitions;
 
 
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
+
+
 import common.TestContext;
 import io.cucumber.java.*;
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
+import java.io.File;
 
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 
 public class Hooks extends BaseSteps{
@@ -18,10 +25,33 @@ public class Hooks extends BaseSteps{
         super(context);
     }
 
+   //public static String from= "C:\\Users\\Abhishek_Gupta3\\Downloads\\UAT Test Master for SMP_20230512.xlsx";
+   // public static String  to="C:\\Users\\Abhishek_Gupta3\\IdeaProjects\\SMPCLPAutomation\\src\\test\\resources\\AllFiles";
+
     @Before
-    public void beforeScenario(Scenario scenario) {
+    public void beforeScenario(Scenario scenario) throws IOException {
         System.out.println("================ BEFORE ALL ================");
         System.out.println("Starting Driver: " + driver);
+
+        File file = new File("C:\\Users\\Abhishek_Gupta3\\Downloads\\UAT Test Master for SMP_20230512.xlsx");
+        if (file.exists())
+            // Show if the file exists
+            System.out.println("Exists");
+        else
+            // Show if the file does not exists
+            System.out.println("Does not Exists");
+
+
+
+        copyFile();
+
+
+
+
+
+
+
+
 
 
 
@@ -37,6 +67,40 @@ public class Hooks extends BaseSteps{
         driver.quit();
 
     }
+
+
+
+
+
+
+
+    public static void copyFile() throws IOException {
+         String from= "C:\\Users\\Abhishek_Gupta3\\Downloads\\UAT Test Master for SMP_20230512.xlsx";
+       String to="C:\\Users\\Abhishek_Gupta3\\IdeaProjects\\SMPCLPAutomation\\src\\test\\resources\\AllFiles";
+
+        FileInputStream inputStream =null;
+        FileOutputStream outputStream =null;
+
+        try {
+            File infile = new File(from);
+            File outfile = new File(to);
+
+            inputStream = new FileInputStream(infile);
+            outputStream = new FileOutputStream(outfile);
+            System.out.println("Copying file : from Java Program");
+
+            Files.copy((Path) inputStream,outputStream);
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+
+
+
+    }
+
+
 
 
 

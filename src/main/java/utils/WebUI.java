@@ -1,6 +1,6 @@
 package utils;
 
-import org.openqa.selenium.support.ui.Select;
+
 
 public class WebUI {
 
