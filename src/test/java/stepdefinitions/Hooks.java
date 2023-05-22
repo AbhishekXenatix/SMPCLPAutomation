@@ -43,7 +43,6 @@ public class Hooks extends BaseSteps{
 
 
 
-        copyFile();
 
 
 
@@ -74,31 +73,9 @@ public class Hooks extends BaseSteps{
 
 
 
-    public static void copyFile() throws IOException {
-         String from= "C:\\Users\\Abhishek_Gupta3\\Downloads\\UAT Test Master for SMP_20230512.xlsx";
-       String to="C:\\Users\\Abhishek_Gupta3\\IdeaProjects\\SMPCLPAutomation\\src\\test\\resources\\AllFiles";
-
-        FileInputStream inputStream =null;
-        FileOutputStream outputStream =null;
-
-        try {
-            File infile = new File(from);
-            File outfile = new File(to);
-
-            inputStream = new FileInputStream(infile);
-            outputStream = new FileOutputStream(outfile);
-            System.out.println("Copying file : from Java Program");
-
-            Files.copy((Path) inputStream,outputStream);
-
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
 
 
 
-
-    }
 
 
 
