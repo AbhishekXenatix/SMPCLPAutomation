@@ -99,9 +99,9 @@ public class CompareExcel{
                 else if (ExPWhTotal.equals(kWhTotal))
                 {
 
-                    //extentReports.createTest("Check the Result").
-                    //log(Status.INFO,"[Processing] :"+"ExPWhTotal " + ExPWhTotal + "=> Sheet1 ExPWhTotal  = " + ExPWhTotal+ " Sheet 2 kWh = " + kWhTotal);
-                    //extentReports.flush();
+                    extentReports.createTest("Check the Result").
+                    log(Status.INFO,"[Processing] :"+"ExPWhTotal " + ExPWhTotal + "=> Sheet1 ExPWhTotal  = " + ExPWhTotal+ " Sheet 2 kWh = " + kWhTotal);
+                    extentReports.flush();
                     //Desktop.getDesktop().browse(new File("Reports/CucumberReports/ExtentReport.html").toURI());
                     // System.out.println("[Processing] :"+"ID " + idstr1 + "=> Sheet 1 id = " + idstr1+ " Sheet 2 id = " + idstr2);
                     log.info("[Processing] :"+"ExPWhTotal " + ExPWhTotal + "=> Sheet1 ExPWhTotal  = " + ExPWhTotal+ " Sheet 2 kWh = " + kWhTotal);

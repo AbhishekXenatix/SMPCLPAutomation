@@ -8,6 +8,10 @@ import io.cucumber.java.*;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import utils.Log;
+import utils.ScenarioCache;
 import utils.WebUI;
 
 import java.io.File;
@@ -20,11 +24,17 @@ public class Hooks extends BaseSteps{
     public Hooks(TestContext context) {
         super(context);
     }
+    public static Logger LOG = LoggerFactory.getLogger(Hooks.class);
 
     @Before
     public void beforeScenario(Scenario scenario) {
         System.out.println("================ BEFORE ALL ================");
         System.out.println("Starting Driver: " + driver);
+        Log.info("******************************************************");
+        LOG.info("Scenario"   + scenario.getName());
+        //ScenarioCache.cacheScenario(scenario);
+
+
 
      /*   File file = new File("C:\\Users\\Abhishek_Gupta3\\Downloads\\TestDataDemo\\Mtr_10001528_Hist.xlsx");
         if (file.exists())
@@ -49,6 +59,11 @@ public class Hooks extends BaseSteps{
             scenario.attach(screenshot, "image/png", "Screenshot Failed");
         }
         driver.quit();
+
+
+        LOG= LoggerFactory.getLogger(Hooks.class);
+        Log.info("Scenario"     + scenario.getName());
+        LOG.info("==============Test Completed============");
 
     }
 
