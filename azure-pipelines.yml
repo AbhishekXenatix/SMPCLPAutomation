@@ -25,4 +25,4 @@ steps:
 - task: PublishHtmlReport@1
   displayName: 'Publish HTML Report'
   inputs:
-      reportDir: 'Reports\CucumberExtentReports\ExtentReport.html'
+      reportDir: '**/Reports/CucumberExtentReports/ExtentReport.html'
