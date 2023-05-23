@@ -21,8 +21,8 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
 
-  steps:
-      - task: PublishHtmlReport@1
-        displayName: 'Publish HTML Report'
-        inputs:
-          reportDir: '$(ResultsPath)/reportName.html'
+
+- task: PublishHtmlReport@1
+  displayName: 'Publish HTML Report'
+  inputs:
+      reportDir: '$(ResultsPath)/reportName.html'
