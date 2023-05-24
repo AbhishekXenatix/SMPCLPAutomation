@@ -8,12 +8,13 @@ import java.nio.file.Files;
 
 public class AT {
 
-    public static String fromCC= "C:\\Users\\Abhishek_Gupta3\\Downloads\\TestDataDemo\\Mtr_10001528_Hist.xlsx";
-    public static String fromLC ="C:\\Users\\Abhishek_Gupta3\\Downloads\\TestDataDemo\\LP2-10001528.xlsx";
-    public static String  to="AllFiles";
-/*
-    public static void main(String[] args)  {
-        copy(from, to);
+    public static String fromCommandCenterExcelFiles= "C:\\Users\\Abhishek_Gupta3\\Downloads\\TestDataDemo\\Mtr_10001528_Hist.xlsx";
+    public static String fromLogsColumn ="C:\\Users\\Abhishek_Gupta3\\Downloads\\TestDataDemo\\LP2-10001528.xlsx";
+    public static String  toAzureCloud="AllFiles";
+
+  /*  public static void main(String[] args)  {
+        copy(fromCommandCenterExcelFiles, toAzureCloud);
+         copy(fromLogsColumn, toAzureCloud);
 
     }*/
 

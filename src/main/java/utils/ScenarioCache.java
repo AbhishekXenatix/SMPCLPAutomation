@@ -1,6 +1,7 @@
 package utils;
 
-import io.cucumber.shaded.messages.types.Scenario;
+
+import io.cucumber.java.Scenario;
 
 public class ScenarioCache {
     

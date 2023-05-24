@@ -8,6 +8,7 @@ import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import utils.ExcelReader;
+import utils.ScenarioCache;
 import utils.WebUI;
 
 
@@ -24,26 +25,23 @@ public class PingStepdefs extends BaseSteps{
 
     @Given("open the site url")
     public void openTheSiteUrl() {
-
-        System.out.println("Driver on Steps class: " + driver);
-
+        ScenarioCache.getCacheScenario().log("Driver on Steps class:" +driver );
     }
 
     @When("send issue command")
-    public void sendIssueCommand() throws IOException {
-
-        System.out.println("Verify the Column from Excel sheet ...>");
+    public void sendIssueCommand() {
+        ScenarioCache.getCacheScenario().log("Verify the Column from Excel sheet ...>:" );
     }
 
     @Then("The report window appeared with expected result")
     public void theReportWindowAppearedWithExpectedResult() {
-
-        System.out.println("The report window appeared with expected result");
+        ScenarioCache.getCacheScenario().log("The report window appeared with expected result :" );
     }
 
     @Given("open the browser")
     public void openTheBrowser() {
-        System.out.println("Open the browser");
+        ScenarioCache.getCacheScenario().log("Open the browser Edge Browser :" );
+
 
     }
 
@@ -57,9 +55,9 @@ public class PingStepdefs extends BaseSteps{
         String MtrN = testData.get(MeterRow).get("MeterNumber");
         String MtrNm = testData.get(MeterRow).get("MeterName");
 
-        System.out.println(Mtr);
-        System.out.println(MtrN);
-        System.out.println(MtrNm);
+        ScenarioCache.getCacheScenario().log("Meter Row " + Mtr);
+        ScenarioCache.getCacheScenario().log("Meter Number " + MtrN);
+        ScenarioCache.getCacheScenario().log("Meter Name " + MtrNm);
         driver.get("https://google.com");
         WebUI.sleep(1);
         WebElement ele = driver.findElement(By.name("q"));
@@ -68,12 +66,10 @@ public class PingStepdefs extends BaseSteps{
         ele.submit();
         WebUI.sleep(2);
 
-
-
     }
 
     @Then("Appeared with expected result")
     public void appearedWithExpectedResult() {
-        System.out.println("Meter Information for meter number");
+        ScenarioCache.getCacheScenario().log("Meter Information for meter number :" );
     }
 }

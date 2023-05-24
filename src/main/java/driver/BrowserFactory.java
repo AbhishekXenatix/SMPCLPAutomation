@@ -4,10 +4,10 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 
-import java.time.Duration;
+
+
 
 public class BrowserFactory {
 
@@ -25,15 +25,6 @@ public class BrowserFactory {
                 driver = new ChromeDriver();
                 driver.manage().window().maximize();
                // driver.manage().deleteAllCookies();
-               // driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(PAGE_LOAD_TIMEOUT));
-               // driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(IMPLICIT_WAIT));
-                break;
-            case FIREFOX:
-                System.out.println("Launching " + browserName + " browser...");
-                WebDriverManager.firefoxdriver().setup();
-                driver = new FirefoxDriver();
-                driver.manage().window().maximize();
-                driver.manage().deleteAllCookies();
                // driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(PAGE_LOAD_TIMEOUT));
                // driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(IMPLICIT_WAIT));
                 break;
@@ -63,6 +54,5 @@ public class BrowserFactory {
     private enum Browser {
         CHROME,
         EDGE,
-        FIREFOX,
     }
 }

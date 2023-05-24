@@ -3,6 +3,8 @@ package stepdefinitions;
 
 
 
+
+
 import common.TestContext;
 import io.cucumber.java.*;
 
@@ -10,21 +12,18 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import io.cucumber.java.Scenario;
+
 import utils.Log;
 import utils.ScenarioCache;
-import utils.WebUI;
-
-import java.io.File;
-
-import static stepdefinitions.AT.*;
 
 
 public class Hooks extends BaseSteps{
-
     public Hooks(TestContext context) {
         super(context);
     }
     public static Logger LOG = LoggerFactory.getLogger(Hooks.class);
+    public static Scenario scenario;
 
     @Before
     public void beforeScenario(Scenario scenario) {
@@ -32,9 +31,7 @@ public class Hooks extends BaseSteps{
         System.out.println("Starting Driver: " + driver);
         Log.info("******************************************************");
         LOG.info("Scenario"   + scenario.getName());
-        //ScenarioCache.cacheScenario(scenario);
-
-
+        ScenarioCache.cacheScenario(scenario);
 
      /*   File file = new File("C:\\Users\\Abhishek_Gupta3\\Downloads\\TestDataDemo\\Mtr_10001528_Hist.xlsx");
         if (file.exists())
@@ -44,12 +41,12 @@ public class Hooks extends BaseSteps{
             // Show if the file does not exists
             System.out.println("Does not Exists");
 
-        AT.copy(fromCC, to);
-        AT.copy(fromLC, to);
+        AT.copy(fromCommandCenterExcelFiles, toAzureCloud);
+        AT.copy(fromLogsColumn, toAzureCloud);
         WebUI.sleep(1);*/
 
-
     }
+
 
     @After
     public void afterScenario(Scenario scenario) {
@@ -59,13 +56,15 @@ public class Hooks extends BaseSteps{
             scenario.attach(screenshot, "image/png", "Screenshot Failed");
         }
         driver.quit();
-
-
         LOG= LoggerFactory.getLogger(Hooks.class);
         Log.info("Scenario"     + scenario.getName());
         LOG.info("==============Test Completed============");
+        LOG.info("Scenario : '"+scenario.getName() + "' has status " + scenario.getStatus());
+        LOG.info(" Scenario : "+scenario.getName());
 
     }
+
+
 
 
 
