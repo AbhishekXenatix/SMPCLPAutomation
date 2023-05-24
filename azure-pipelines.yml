@@ -22,4 +22,9 @@ steps:
     goals: 'package'
 
 
-
+- task: PublishCucumberReport@1
+  inputs:
+    jsonDir: '$(System.DefaultWorkingDirectory)'
+    outputPath: '$(System.DefaultWorkingDirectory)'
+    theme: 'bootstrap'
+    reportSuiteAsScenarios: true
