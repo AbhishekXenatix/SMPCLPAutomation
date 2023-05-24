@@ -25,7 +25,7 @@ public class PingStepdefs extends BaseSteps{
 
     @Given("open the site url")
     public void openTheSiteUrl() {
-        ScenarioCache.getCacheScenario().log("Driver on Steps class:" +driver );
+        ScenarioCache.getCacheScenario().log("Driver on Steps class:" );
     }
 
     @When("send issue command")
@@ -36,6 +36,12 @@ public class PingStepdefs extends BaseSteps{
     @Then("The report window appeared with expected result")
     public void theReportWindowAppearedWithExpectedResult() {
         ScenarioCache.getCacheScenario().log("The report window appeared with expected result :" );
+        driver.get("https://google.com");
+        WebUI.sleep(1);
+        WebElement ele = driver.findElement(By.name("pppqqrrwrwqr"));
+        ele.sendKeys("Automation test");
+        ele.submit();
+        WebUI.sleep(2);
     }
 
     @Given("open the browser")
