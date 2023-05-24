@@ -27,9 +27,9 @@ public class Hooks extends BaseSteps{
 
     @Before
     public void beforeScenario(Scenario scenario) {
-        System.out.println("================ BEFORE ALL ================");
-        System.out.println("Starting Driver: " + driver);
-        Log.info("******************************************************");
+        LOG.info("================ BEFORE ALL ================");
+        LOG.info("Starting Edge Driver: ");
+        LOG.info("******************************************************");
         LOG.info("Scenario"   + scenario.getName());
         ScenarioCache.cacheScenario(scenario);
 
@@ -57,7 +57,7 @@ public class Hooks extends BaseSteps{
         }
         driver.quit();
         LOG= LoggerFactory.getLogger(Hooks.class);
-        Log.info("Scenario"     + scenario.getName());
+        LOG.info("Scenario"     + scenario.getName());
         LOG.info("==============Test Completed============");
         LOG.info("Scenario : '"+scenario.getName() + "' has status " + scenario.getStatus());
         LOG.info(" Scenario : "+scenario.getName());
