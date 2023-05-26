@@ -62,6 +62,8 @@ public class Hooks extends BaseSteps{
         LOG.info("Scenario : '"+scenario.getName() + "' has status " + scenario.getStatus());
         LOG.info(" Scenario : "+scenario.getName());
 
+
+
     }
 
 

@@ -20,7 +20,7 @@ public class CompareStepdefs extends BaseSteps{
 
     @Given("There are two files for comparing in equal data")
     public void thereAreTwoFilesForComparingInEqualData() {
-        ScenarioCache.getCacheScenario().log("There are two files for comparing from Lin Yang (Single phase meter) – DE Mapping" );
+        ScenarioCache.getCacheScenario().log("There are two files for comparing from  Lin Yang (Single phase meter) – DE Mapping" );
     }
 
     @When("Start comparing the data")

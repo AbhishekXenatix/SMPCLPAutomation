@@ -53,7 +53,7 @@ public class PingStepdefs extends BaseSteps{
 
     @When("search from {} and {} for meter number")
     public void searchFromAndForMeterNumber(String SheetName, Integer MeterRow) throws IOException, InvalidFormatException {
-      /*  ExcelReader reader = new ExcelReader();
+        ExcelReader reader = new ExcelReader();
         List<Map<String,String>> testData =
                 reader.getData("FilesExcel\\Automation.xlsx",SheetName);
 
@@ -70,7 +70,7 @@ public class PingStepdefs extends BaseSteps{
         ele.sendKeys(MtrN);
         WebUI.sleep(2);
         ele.submit();
-        WebUI.sleep(2);*/
+        WebUI.sleep(2);
 
     }
 

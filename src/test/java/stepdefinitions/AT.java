@@ -12,11 +12,11 @@ public class AT {
     public static String fromLogsColumn ="C:\\Users\\Abhishek_Gupta3\\Downloads\\TestDataDemo\\LP2-10001528.xlsx";
     public static String  toAzureCloud="AllFiles";
 
-  /*  public static void main(String[] args)  {
+    public static void main(String[] args)  {
         copy(fromCommandCenterExcelFiles, toAzureCloud);
          copy(fromLogsColumn, toAzureCloud);
 
-    }*/
+    }
 
     public static void copy(String from , String to)  {
         File srcFile = new File(from);
