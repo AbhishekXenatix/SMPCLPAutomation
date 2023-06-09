@@ -1,11 +1,7 @@
 package stepdefinitions;
 
-
-
-
-
-
 import common.TestContext;
+import driver.DriverFactory;
 import io.cucumber.java.*;
 
 import org.openqa.selenium.OutputType;
@@ -14,7 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import io.cucumber.java.Scenario;
 
-import utils.Log;
+import utils.PropertiesHelpers;
 import utils.ScenarioCache;
 
 
@@ -23,13 +19,21 @@ public class Hooks extends BaseSteps{
         super(context);
     }
     public static Logger LOG = LoggerFactory.getLogger(Hooks.class);
-    public static Scenario scenario;
+   // public static Scenario scenario;
+
+
+    @BeforeAll
+    public static void beforeAll() {
+        System.out.println("================ beforeAll =======================================================");
+        PropertiesHelpers.loadAllFiles();
+
+    }
+
 
     @Before
     public void beforeScenario(Scenario scenario) {
-        LOG.info("================ BEFORE ALL ================");
-        LOG.info("Starting Edge Driver: ");
-        LOG.info("******************************************************");
+        LOG.info("=============================================== BEFORE ======================================");
+        LOG.info("**************************************************************************************************");
         LOG.info("Scenario"   + scenario.getName());
         ScenarioCache.cacheScenario(scenario);
 
@@ -53,18 +57,26 @@ public class Hooks extends BaseSteps{
         //validate if scenario has failed then Screenshot
         if (scenario.isFailed()) {
             final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-            scenario.attach(screenshot, "image/png", "Screenshot Failed");
+            scenario.attach(screenshot, "image/png", "Screenshot Failed --" + scenario.getName() +scenario.getSourceTagNames());
+        }else {
+            final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+            scenario.attach(screenshot, "image/png", "Screenshot Attached --" + scenario.getName() + scenario.getSourceTagNames());
         }
-        driver.quit();
-        LOG= LoggerFactory.getLogger(Hooks.class);
+
         LOG.info("Scenario"     + scenario.getName());
-        LOG.info("==============Test Completed============");
         LOG.info("Scenario : '"+scenario.getName() + "' has status " + scenario.getStatus());
-        LOG.info(" Scenario : "+scenario.getName());
-
-
+        LOG.info("====================================================Test Completed=====================================");
 
     }
+
+
+
+
+
+
+
+
+
 
 
 

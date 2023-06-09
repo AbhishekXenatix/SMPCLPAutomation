@@ -76,7 +76,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>SMPCLPAutomation</td>
         <td>1</td>
-      <td>23 May 2023, 21:46</td>
+      <td>08 Jun 2023, 15:55</td>
     </tr>
   </tbody>
 </table>
@@ -293,14 +293,14 @@ $(document).ready(function() {
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 	Suppressed: io.cucumber.java.InvalidMethodSignatureException: A method annotated with BeforeAll or AfterAll must have one of these signatures:
  * public static void before_or_after_all()
-at stepdefinitions.Hooks.setUp()
+at stepdefinitions.Hooks.cleanup()
 
 
 		at io.cucumber.java.InvalidMethodSignatureException$InvalidMethodSignatureExceptionBuilder.build(InvalidMethodSignatureException.java:52)
 		at io.cucumber.java.JavaStaticHookDefinition.createInvalidSignatureException(JavaStaticHookDefinition.java:44)
 		at io.cucumber.java.JavaStaticHookDefinition.requireValidMethod(JavaStaticHookDefinition.java:28)
 		at io.cucumber.java.JavaStaticHookDefinition.&lt;init&gt;(JavaStaticHookDefinition.java:17)
-		at io.cucumber.java.GlueAdaptor.addDefinition(GlueAdaptor.java:30)
+		at io.cucumber.java.GlueAdaptor.addDefinition(GlueAdaptor.java:37)
 		at io.cucumber.java.JavaBackend.lambda$loadGlue$1(JavaBackend.java:42)
 		at io.cucumber.java.MethodScanner.scan(MethodScanner.java:67)
 		at io.cucumber.java.MethodScanner.scan(MethodScanner.java:58)
@@ -337,14 +337,14 @@ at stepdefinitions.Hooks.setUp()
 		... 10 more
 	Suppressed: io.cucumber.java.InvalidMethodSignatureException: A method annotated with BeforeAll or AfterAll must have one of these signatures:
  * public static void before_or_after_all()
-at stepdefinitions.Hooks.setUp()
+at stepdefinitions.Hooks.cleanup()
 
 
 		at io.cucumber.java.InvalidMethodSignatureException$InvalidMethodSignatureExceptionBuilder.build(InvalidMethodSignatureException.java:52)
 		at io.cucumber.java.JavaStaticHookDefinition.createInvalidSignatureException(JavaStaticHookDefinition.java:44)
 		at io.cucumber.java.JavaStaticHookDefinition.requireValidMethod(JavaStaticHookDefinition.java:28)
 		at io.cucumber.java.JavaStaticHookDefinition.&lt;init&gt;(JavaStaticHookDefinition.java:17)
-		at io.cucumber.java.GlueAdaptor.addDefinition(GlueAdaptor.java:30)
+		at io.cucumber.java.GlueAdaptor.addDefinition(GlueAdaptor.java:37)
 		at io.cucumber.java.JavaBackend.lambda$loadGlue$1(JavaBackend.java:42)
 		at io.cucumber.java.MethodScanner.scan(MethodScanner.java:67)
 		at io.cucumber.java.MethodScanner.scan(MethodScanner.java:58)

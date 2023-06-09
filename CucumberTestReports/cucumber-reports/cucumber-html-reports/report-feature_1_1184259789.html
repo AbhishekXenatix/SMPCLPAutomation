@@ -76,7 +76,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>SMPCLPAutomation</td>
         <td>1</td>
-      <td>29 May 2023, 11:07</td>
+      <td>09 Jun 2023, 08:38</td>
     </tr>
   </tbody>
 </table>
@@ -129,19 +129,19 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">Send ping issue command</td>
-          <td      class="passed"    >11</td>
-          <td      class="failed"    >1</td>
+          <td      class="passed"    >12</td>
+          <td >0</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
           <td class="total">12</td>
 
-          <td  class="passed"    >3</td>
-          <td  class="failed"    >1</td>
+          <td  class="passed"    >4</td>
+          <td >0</td>
           <td class="total">4</td>
 
-          <td class="duration" data-value="26468762900">26.468</td>
-          <td class="failed">Failed</td>
+          <td class="duration" data-value="19472559700">19.472</td>
+          <td class="passed">Passed</td>
         </tr>
         </tbody>
 
@@ -173,7 +173,7 @@ $(document).ready(function() {
 </div>
 
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Feature</span>
   <span class="name">Send ping issue command</span>
 
@@ -188,15 +188,17 @@ $(document).ready(function() {
 
 
 <div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2260346879.html">@Test123</a>
 </div>
 
 
-  <span class="lead-duration duration">2.290</span>
+  <span class="lead-duration duration">0.002</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario</span>
   <span class="name">open browser and send command</span>
 
@@ -207,7 +209,7 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details  in ">
+  <div id="element-1" class="collapse collapsable-details ">
 
 
   <div class="inner-level hooks-element-before">
@@ -229,7 +231,7 @@ $(document).ready(function() {
             <span class="keyword indention">Before</span>
               <span class="location name">stepdefinitions.Hooks.beforeScenario(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">1.022</span>
+  <span class="lead-duration duration">2.533</span>
 
           </div>
 
@@ -246,9 +248,9 @@ $(document).ready(function() {
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-3">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-3">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -258,7 +260,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-3" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-3" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -266,7 +268,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">open the site url</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -340,11 +342,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then failed">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">The report window appeared with expected result</span>
 
-  <span class="lead-duration duration">2.289</span>
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -353,44 +355,6 @@ $(document).ready(function() {
 
 
 
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-6">
-          <a>org.openqa.selenium.NoSuchElementException:</a>
-      </div>
-      <div id="msg-6" class="collapse collapsable-details  in ">
-        <pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;*[name='pppqqrrwrwqr']&quot;}
-  (Session info: MicrosoftEdge=113.0.1774.57)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.9.1', revision: 'eb2032df7f'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [7a280add6c198e2b24940914c8cfc11d, findElement {using=name, value=pppqqrrwrwqr}]
-Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 113.0.1774.57, ms:edgeOptions: {debuggerAddress: localhost:64385}, msedge: {msedgedriverVersion: 113.0.1774.57 (b3b212deff59..., userDataDir: C:\Users\ABHISH~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64385/devtoo..., se:cdpVersion: 113.0.1774.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 7a280add6c198e2b24940914c8cfc11d
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at stepdefinitions.PingStepdefs.theReportWindowAppearedWithExpectedResult(PingStepdefs.java:41)
-	at &#10045;.The report window appeared with expected result(file:///C:/Users/Abhishek_Gupta3/IdeaProjects/SMPCLPAutomation/src/test/resources/features/Ping.feature:8)
-</pre>
-      </div>
-    </div>
-  </div>
-
 
 
 
@@ -398,11 +362,11 @@ Session ID: 7a280add6c198e2b24940914c8cfc11d
 
   <div class="outputs inner-level">
       <div class="output indention">
-        <div data-toggle="collapse" class=" collapsable-control" data-target="#output-7">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-6">
           Output 1
           <i class="chevron fa fa-fw"></i>
         </div>
-        <div id="output-7" class="collapse collapsable-details  in "  aria-expanded="true" >
+        <div id="output-6" class="collapse collapsable-details " >
           
           <pre><p>The report window appeared with expected result :</p></pre>
         </div>
@@ -421,7 +385,7 @@ Session ID: 7a280add6c198e2b24940914c8cfc11d
 
 
   <div class="inner-level hooks-element-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-8">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-7">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -433,13 +397,13 @@ Session ID: 7a280add6c198e2b24940914c8cfc11d
 
     </div>
 
-    <div id="after-8" class="inner-level collapse collapsable-details ">
+    <div id="after-7" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
               <span class="location name">stepdefinitions.Hooks.afterScenario(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">0.421</span>
+  <span class="lead-duration duration">0.364</span>
 
           </div>
 
@@ -450,15 +414,15 @@ Session ID: 7a280add6c198e2b24940914c8cfc11d
 
   <div class="embeddings inner-level">
   <div class="embedding indention">
-    <div data-toggle="collapse" data-target="#embedding-9" class="collapsable-control">
-      <a>Screenshot Failed</a>
-      <a href="embeddings/embedding_-419428486.png" download target="_blank">
+    <div data-toggle="collapse" data-target="#embedding-8" class="collapsable-control">
+      <a>Screenshot Attached --open browser and send command[@Test123]</a>
+      <a href="embeddings/embedding_1848707260.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
-    <div id="embedding-9" class="collapse collapsable-details ">
+    <div id="embedding-8" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-419428486.png">
+        <img src="embeddings/embedding_1848707260.png">
       </div>
     </div>
   </div>
@@ -476,13 +440,15 @@ Session ID: 7a280add6c198e2b24940914c8cfc11d
 
 
 <div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2260346140.html">@Test098</a>
 </div>
 
 
-  <span class="lead-duration duration">7.718</span>
+  <span class="lead-duration duration">6.448</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-10">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-9">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario Outline</span>
@@ -495,11 +461,11 @@ Session ID: 7a280add6c198e2b24940914c8cfc11d
   </span>
   <div class="description indention"></div>
 
-  <div id="element-10" class="collapse collapsable-details ">
+  <div id="element-9" class="collapse collapsable-details ">
 
 
   <div class="inner-level hooks-element-before">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-11">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-10">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -511,13 +477,13 @@ Session ID: 7a280add6c198e2b24940914c8cfc11d
 
     </div>
 
-    <div id="before-11" class="inner-level collapse collapsable-details ">
+    <div id="before-10" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">Before</span>
               <span class="location name">stepdefinitions.Hooks.beforeScenario(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">1.146</span>
+  <span class="lead-duration duration">2.448</span>
 
           </div>
 
@@ -534,7 +500,7 @@ Session ID: 7a280add6c198e2b24940914c8cfc11d
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-12">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-11">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -546,7 +512,7 @@ Session ID: 7a280add6c198e2b24940914c8cfc11d
 
   </div>
 
-  <div id="steps-12" class="inner-level collapse collapsable-details ">
+  <div id="steps-11" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -554,7 +520,46 @@ Session ID: 7a280add6c198e2b24940914c8cfc11d
   <span class="keyword indention">Given</span>
   <span class="name">open the browser</span>
 
-  <span class="lead-duration duration">0.002</span>
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="outputs inner-level">
+      <div class="output indention">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-12">
+          Output 1
+          <i class="chevron fa fa-fw"></i>
+        </div>
+        <div id="output-12" class="collapse collapsable-details " >
+          
+          <pre><p>Open the browser Edge Browser :</p></pre>
+        </div>
+      </div>
+  </div>
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">search from <span class="argument">Information</span> and <span class="argument">1</span> for meter number</span>
+
+  <span class="lead-duration duration">6.447</span>
 
 </div>
 
@@ -575,45 +580,6 @@ Session ID: 7a280add6c198e2b24940914c8cfc11d
           <i class="chevron fa fa-fw"></i>
         </div>
         <div id="output-13" class="collapse collapsable-details " >
-          
-          <pre><p>Open the browser Edge Browser :</p></pre>
-        </div>
-      </div>
-  </div>
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-When passed">
-  <span class="keyword indention">When</span>
-  <span class="name">search from <span class="argument">Information</span> and <span class="argument">1</span> for meter number</span>
-
-  <span class="lead-duration duration">7.715</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-  <div class="outputs inner-level">
-      <div class="output indention">
-        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-14">
-          Output 1
-          <i class="chevron fa fa-fw"></i>
-        </div>
-        <div id="output-14" class="collapse collapsable-details " >
           
           <pre><p>Meter Row 2</p><p>Meter Number 234567</p><p>Meter Name LY</p></pre>
         </div>
@@ -648,11 +614,11 @@ Session ID: 7a280add6c198e2b24940914c8cfc11d
 
   <div class="outputs inner-level">
       <div class="output indention">
-        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-15">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-14">
           Output 1
           <i class="chevron fa fa-fw"></i>
         </div>
-        <div id="output-15" class="collapse collapsable-details " >
+        <div id="output-14" class="collapse collapsable-details " >
           
           <pre><p>Meter Information for meter number :</p></pre>
         </div>
@@ -671,7 +637,7 @@ Session ID: 7a280add6c198e2b24940914c8cfc11d
 
 
   <div class="inner-level hooks-element-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-16">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-15">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -683,13 +649,13 @@ Session ID: 7a280add6c198e2b24940914c8cfc11d
 
     </div>
 
-    <div id="after-16" class="inner-level collapse collapsable-details ">
+    <div id="after-15" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
               <span class="location name">stepdefinitions.Hooks.afterScenario(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">0.307</span>
+  <span class="lead-duration duration">0.405</span>
 
           </div>
 
@@ -698,6 +664,21 @@ Session ID: 7a280add6c198e2b24940914c8cfc11d
 
 
 
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-16" class="collapsable-control">
+      <a>Screenshot Attached --Search Meter number[@Test098]</a>
+      <a href="embeddings/embedding_-1790929588.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-16" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-1790929588.png">
+      </div>
+    </div>
+  </div>
+  </div>
 
         </div>
     </div>
@@ -711,10 +692,12 @@ Session ID: 7a280add6c198e2b24940914c8cfc11d
 
 
 <div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2260346140.html">@Test098</a>
 </div>
 
 
-  <span class="lead-duration duration">8.682</span>
+  <span class="lead-duration duration">6.409</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-17">
@@ -752,7 +735,7 @@ Session ID: 7a280add6c198e2b24940914c8cfc11d
             <span class="keyword indention">Before</span>
               <span class="location name">stepdefinitions.Hooks.beforeScenario(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">1.079</span>
+  <span class="lead-duration duration">2.520</span>
 
           </div>
 
@@ -828,7 +811,7 @@ Session ID: 7a280add6c198e2b24940914c8cfc11d
   <span class="keyword indention">When</span>
   <span class="name">search from <span class="argument">Information</span> and <span class="argument">0</span> for meter number</span>
 
-  <span class="lead-duration duration">8.680</span>
+  <span class="lead-duration duration">6.407</span>
 
 </div>
 
@@ -924,7 +907,7 @@ Session ID: 7a280add6c198e2b24940914c8cfc11d
             <span class="keyword indention">After</span>
               <span class="location name">stepdefinitions.Hooks.afterScenario(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">0.248</span>
+  <span class="lead-duration duration">0.990</span>
 
           </div>
 
@@ -933,6 +916,21 @@ Session ID: 7a280add6c198e2b24940914c8cfc11d
 
 
 
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-24" class="collapsable-control">
+      <a>Screenshot Attached --Search Meter number[@Test098]</a>
+      <a href="embeddings/embedding_-1715259330.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-24" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-1715259330.png">
+      </div>
+    </div>
+  </div>
+  </div>
 
         </div>
     </div>
@@ -946,13 +944,15 @@ Session ID: 7a280add6c198e2b24940914c8cfc11d
 
 
 <div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2260346140.html">@Test098</a>
 </div>
 
 
-  <span class="lead-duration duration">7.777</span>
+  <span class="lead-duration duration">6.612</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-24">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-25">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario Outline</span>
@@ -965,11 +965,11 @@ Session ID: 7a280add6c198e2b24940914c8cfc11d
   </span>
   <div class="description indention"></div>
 
-  <div id="element-24" class="collapse collapsable-details ">
+  <div id="element-25" class="collapse collapsable-details ">
 
 
   <div class="inner-level hooks-element-before">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-25">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-26">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -981,13 +981,13 @@ Session ID: 7a280add6c198e2b24940914c8cfc11d
 
     </div>
 
-    <div id="before-25" class="inner-level collapse collapsable-details ">
+    <div id="before-26" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">Before</span>
               <span class="location name">stepdefinitions.Hooks.beforeScenario(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">0.970</span>
+  <span class="lead-duration duration">2.472</span>
 
           </div>
 
@@ -1004,7 +1004,7 @@ Session ID: 7a280add6c198e2b24940914c8cfc11d
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-26">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-27">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -1016,7 +1016,7 @@ Session ID: 7a280add6c198e2b24940914c8cfc11d
 
   </div>
 
-  <div id="steps-26" class="inner-level collapse collapsable-details ">
+  <div id="steps-27" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -1040,11 +1040,11 @@ Session ID: 7a280add6c198e2b24940914c8cfc11d
 
   <div class="outputs inner-level">
       <div class="output indention">
-        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-27">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-28">
           Output 1
           <i class="chevron fa fa-fw"></i>
         </div>
-        <div id="output-27" class="collapse collapsable-details " >
+        <div id="output-28" class="collapse collapsable-details " >
           
           <pre><p>Open the browser Edge Browser :</p></pre>
         </div>
@@ -1063,46 +1063,7 @@ Session ID: 7a280add6c198e2b24940914c8cfc11d
   <span class="keyword indention">When</span>
   <span class="name">search from <span class="argument">Information</span> and <span class="argument">2</span> for meter number</span>
 
-  <span class="lead-duration duration">7.776</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-  <div class="outputs inner-level">
-      <div class="output indention">
-        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-28">
-          Output 1
-          <i class="chevron fa fa-fw"></i>
-        </div>
-        <div id="output-28" class="collapse collapsable-details " >
-          
-          <pre><p>Meter Row 3</p><p>Meter Number 345678</p><p>Meter Name AB</p></pre>
-        </div>
-      </div>
-  </div>
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then passed">
-  <span class="keyword indention">Then</span>
-  <span class="name">Appeared with expected result</span>
-
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">6.610</span>
 
 </div>
 
@@ -1124,6 +1085,45 @@ Session ID: 7a280add6c198e2b24940914c8cfc11d
         </div>
         <div id="output-29" class="collapse collapsable-details " >
           
+          <pre><p>Meter Row 3</p><p>Meter Number 345678</p><p>Meter Name AB</p></pre>
+        </div>
+      </div>
+  </div>
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Appeared with expected result</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="outputs inner-level">
+      <div class="output indention">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-30">
+          Output 1
+          <i class="chevron fa fa-fw"></i>
+        </div>
+        <div id="output-30" class="collapse collapsable-details " >
+          
           <pre><p>Meter Information for meter number :</p></pre>
         </div>
       </div>
@@ -1141,7 +1141,7 @@ Session ID: 7a280add6c198e2b24940914c8cfc11d
 
 
   <div class="inner-level hooks-element-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-30">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-31">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -1153,13 +1153,13 @@ Session ID: 7a280add6c198e2b24940914c8cfc11d
 
     </div>
 
-    <div id="after-30" class="inner-level collapse collapsable-details ">
+    <div id="after-31" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
               <span class="location name">stepdefinitions.Hooks.afterScenario(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">0.261</span>
+  <span class="lead-duration duration">0.369</span>
 
           </div>
 
@@ -1168,6 +1168,21 @@ Session ID: 7a280add6c198e2b24940914c8cfc11d
 
 
 
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-32" class="collapsable-control">
+      <a>Screenshot Attached --Search Meter number[@Test098]</a>
+      <a href="embeddings/embedding_1724544547.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-32" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_1724544547.png">
+      </div>
+    </div>
+  </div>
+  </div>
 
         </div>
     </div>
